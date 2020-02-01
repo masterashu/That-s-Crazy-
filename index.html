@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/pathfinding-browser.js"></script>
+    <title>That's Crazy</title>
+    <style>
+        body {
+            color: #fff;
+            background-color: black;
+            margin: 0;
+            position: relative;
+            height: 100vh;
+        }
+
+        #body1 {
+            left: 0;
+            top: 0;
+            margin: 0;
+            position: absolute;
+        }
+
+        img {
+            visibility: hidden;
+            position: absolute;
+        }
+
+        #canvas {
+            position: absolute;
+        }
+
+        .floor {
+            position: absolute;
+            padding: 20px;
+            border: black solid 1px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        #ggg {
+            background: #aaa;
+            bottom: 0;
+            left: 0;
+        }
+
+        #room{
+            padding: 20px;
+            position: absolute;
+            float: left;
+            left: 50vw;
+            bottom: 0;
+        }
+
+        #RoomSearch{
+            font-size: 2em;
+        }
+
+        .error{
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="body1">
+        <canvas id="canvas"></canvas>
+        <img id="bg">        
+    </div>
+    <div class="floor" id="ggg" onclick="changeFloor()">0</div>
+    <div id="room">
+        <input type="text" name="text" id="RoomSearch">
+        <button style="font-size: 2em;" onclick="roomSearch()">Search</button>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
